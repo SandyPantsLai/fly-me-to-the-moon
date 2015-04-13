@@ -1,0 +1,10 @@
+<h1><%= @song.song_name %> <%= @song.artist %></h1>
+  <p><strong>Mood:</strong> <%= @song.mood %></p>
+  <p><strong>YouTube Link:</strong></p>
+  <p><%= @song.link %></p>
+
+<a href="/songs/<%= @song.id %>/edit"> Edit song</a>
+<form action="/songs/<%= @song.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Song">
+</form>

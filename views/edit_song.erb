@@ -1,0 +1,10 @@
+<h1>Edit a Song</h1>
+
+<form action="/songs/<%= @song.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="song_name" value="<%= @song.song_name %>">
+  <input type="text" name="artist" value="<%= @song.artist %>">
+  <input type="text" name="mood" value="<%= @song.mood %>">
+  <input type="text" name="link" value="<%= @song.link %>">
+  <input type="submit" value="Update Song Request">
+</form>
