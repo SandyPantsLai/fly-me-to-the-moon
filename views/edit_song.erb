@@ -4,7 +4,29 @@
   <input type="hidden" name="_method" value="put">
   <input type="text" name="song_name" value="<%= @song.song_name %>">
   <input type="text" name="artist" value="<%= @song.artist %>">
-  <input type="text" name="mood" value="<%= @song.mood %>">
+  <fieldset>
+    <legend>Mood(s)</legend>
+    <label>
+      <input type="checkbox" name="mood[]" value="Upbeat">
+      <span>Upbeat</span>
+    </label>
+    <label>
+      <input type="checkbox" name="mood[]" value="Soothing">
+      <span>Soothing</span>
+    </label>
+    <label>
+      <input type="checkbox" name="mood[]" value="Lounge">
+      <span>Lounge</span>
+    </label>
+    <label>
+      <input type="checkbox" name="mood[]" value="Cocktail Hour">
+      <span>Cocktail Hour</span>
+    </label>
+    <label>
+      <input type="checkbox" name="mood[]" value="Romantic">
+      <span>Romantic</span>
+    </label>
+  </fieldset>
   <input type="text" name="link" value="<%= @song.link %>">
   <input type="submit" value="Update Song Request">
 </form>
